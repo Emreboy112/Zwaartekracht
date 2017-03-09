@@ -1,0 +1,28 @@
+float x =  0;
+float r =  0;
+float y = 50;
+float dy = 0; //snelheid in de x richting
+float g = 1; //Versnelling
+void setup()
+{
+  size(600,700);
+}
+
+void draw(){
+  r = r + 1;
+  x = x + 1;
+  if(r > 255)
+  {
+    r = 0;
+  }
+  fill(r,0,0);
+  ellipse(x,y,100,100);
+  y = y + dy;
+  dy = dy + g;
+  if(y > 550 || y < 50)
+  {
+    //x = 50;
+    dy = -dy;
+  
+  }
+}
